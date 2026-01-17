@@ -1,0 +1,77 @@
+.why {
+  width: 100%;
+  background-color: #efefef;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* TEXTO SUPERIOR */
+.why-text {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.why-text h2 {
+  color: #6f6af8;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.why-text h2 span {
+  color: #6f6af8;
+}
+
+.why-text p {
+  font-size: 14px;
+  color: #111827;
+  line-height: 1.7;
+}
+
+/* BLOCO TECNOLOGIAS */
+.why-tech {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-tech h3 {
+  color: #6f6af8;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ICONES */
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.tech-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+/* CORES DOS CÍRCULOS */
+.tech-circle.n8n {
+  background-color: #5b0b17;
+}
+
+.tech-circle.gpt {
+  background-color: #e5f0f3;
+  color: #000;
+}
+
+.tech-circle.hostinger {
+  background-color: #6f42c1;
+}
