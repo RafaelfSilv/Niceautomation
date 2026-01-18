@@ -1,0 +1,131 @@
+/* PÁGINA */
+.cadastro-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, #ecebff 0%, #f6f6f6 50%, #ffffff 100%);
+  box-sizing: border-box;
+}
+
+/* WRAPPER */
+.cadastro-wrapper {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+/* BOTÃO VOLTAR */
+.btn-back {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6f6af8;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-back:hover {
+  opacity: 0.7;
+  transform: translateX(-2px);
+}
+
+/* BOX PRINCIPAL */
+.cadastro-box {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(111, 106, 248, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* HEADER */
+.cadastro-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cadastro-header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #6f6af8;
+  font-weight: 800;
+}
+
+.cadastro-header p {
+  font-size: 14px;
+  color: #111827;
+  opacity: 0.85;
+}
+
+/* FORM */
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* INPUTS */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.input-group input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+  border: 1px solid #6f6af8;
+  box-shadow: 0 0 0 5px rgba(111, 106, 248, 0.15);
+}
+
+/* BOTÃO */
+.btn-submit {
+  margin-top: 10px;
+  width: 100%;
+  background: linear-gradient(135deg, #3be4ff, #6f6af8);
+  color: #0f172a;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(59, 228, 255, 0.25);
+}
+
+/* TEXTO DE RODAPÉ */
+.cadastro-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #111827;
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
+.cadastro-footer span {
+  color: #6f6af8;
+  font-weight: 800;
+  cursor: pointer;
+}

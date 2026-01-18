@@ -1,15 +1,20 @@
 import "./WhyChoose.css";
+import { Reveal } from "../animation/Reveal";
 
 export default function WhyChoose() {
   return (
     <section className="why">
       {/* BLOCO TEXTO */}
       <div className="why-text">
+        <section style={{ marginTop: '100px' }}>
+        <Reveal>
         <h2>
           Por que escolher a nossa empresa para o seu negócio
           <span>?</span>
         </h2>
-
+        </Reveal>
+        </section>
+        
         <p>
           Nosso objetivo é trazer soluções que solucionem problemas
           sistematicamente lentos e complexos para que sejam simples e
@@ -18,6 +23,8 @@ export default function WhyChoose() {
           clientes tudo através da nossa ferramenta avançada que simula ações
           humanas.
         </p>
+        
+        
       </div>
 
       {/* BLOCO TECNOLOGIAS */}

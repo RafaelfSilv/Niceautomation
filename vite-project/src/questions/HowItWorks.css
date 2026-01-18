@@ -1,0 +1,204 @@
+/* FUNDO GERAL DA SEÇÃO */
+.how-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #0f1a33 0%, #0b1324 50%, #08101f 100%);
+  color: white;
+}
+
+.how-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =======================
+   BLOCO 1 - COMO FUNCIONA
+======================= */
+.how-block {
+  padding: 50px 35px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  margin-bottom: 50px;
+}
+
+.how-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.how-kicker {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.how-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.how-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.how-card {
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  border: 1px solid rgba(111, 106, 248, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.how-card-icon {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(111, 106, 248, 1), rgba(59, 228, 255, 1));
+  font-size: 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 18px 40px rgba(59, 228, 255, 0.18);
+}
+
+.how-card-title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.how-card-text {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* =======================
+   BLOCO 2 - OFERTAS
+======================= */
+.offers-block {
+  padding: 50px 35px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.offers-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.offers-kicker {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.offers-title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* CARD OFERTA */
+.offer-card {
+  position: relative;
+  border-radius: 18px;
+  padding: 30px 26px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+  overflow: hidden;
+}
+
+.offer-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(59, 228, 255, 0.25), transparent 65%);
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(59, 228, 255, 0.28);
+  box-shadow: 0 35px 85px rgba(0, 0, 0, 0.35);
+}
+
+.offer-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6f6af8, #3be4ff);
+  color: white;
+  font-size: 22px;
+  margin-bottom: 14px;
+  box-shadow: 0 22px 45px rgba(111, 106, 248, 0.25);
+}
+
+.offer-card h3 {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+  .how-grid,
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-title {
+    font-size: 26px;
+  }
+
+  .offers-title {
+    font-size: 24px;
+  }
+}

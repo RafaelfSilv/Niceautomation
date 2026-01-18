@@ -1,15 +1,16 @@
 import "./Header.css";
-import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header-left">
         <img
-          src="https://via.placeholder.com/40"
+          src="Logo.jpeg"
           alt="Logo"
           className="logo"
         />
+        
         <span className="brand">Nice Automation</span>
       </div>
 
@@ -22,7 +23,9 @@ export default function Header() {
       </nav>
 
       <div className="header-right">
-        <button className="btn-primary">Cadastro</button>
+        <Link to="/cadastro" className="btn-primary">
+            Cadastro
+          </Link>
       </div>
     </header>
   );
