@@ -1,77 +1,180 @@
-.why {
+.whyDark {
   width: 100%;
-  background-color: #efefef;
-  padding: 60px 20px;
-  box-sizing: border-box;
+  padding: 90px 20px;
+  background: radial-gradient(circle at bottom, #0f1a33 0%, #0b1324 55%, #08101f 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-/* TEXTO SUPERIOR */
-.why-text {
-  max-width: 900px;
-  margin: 0 auto 80px;
+/* ===== efeitos do fundo ===== */
+.whyFx {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.whyOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.22;
+  animation: whyFloat 8s ease-in-out infinite;
+}
+
+.orbA {
+  width: 350px;
+  height: 350px;
+  background: #6f6af8;
+  top: -140px;
+  right: -120px;
+}
+
+.orbB {
+  width: 280px;
+  height: 280px;
+  background: #3be4ff;
+  bottom: -130px;
+  left: -120px;
+  animation-delay: 1.2s;
+}
+
+@keyframes whyFloat {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-20px, -25px) scale(1.05); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+/* garante que conteúdo fique acima */
+.whyDark-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== texto ===== */
+.whyDark-top {
   text-align: center;
+  margin-bottom: 55px;
 }
 
-.why-text h2 {
-  color: #6f6af8;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 16px;
+.whyDark-kicker {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 10px;
 }
 
-.why-text h2 span {
-  color: #6f6af8;
+.whyDark-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: #a5b4fc;
 }
 
-.why-text p {
+.whyDark-desc {
+  max-width: 860px;
+  margin: 0 auto;
   font-size: 14px;
-  color: #111827;
-  line-height: 1.7;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.78);
 }
 
-/* BLOCO TECNOLOGIAS */
-.why-tech {
-  background-color: #ffffff;
-  padding: 60px 20px;
+/* ===== box tecnologias premium ===== */
+.whyDark-techBox {
+  padding: 50px 35px;
+  border-radius: 26px;
   text-align: center;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
 }
 
-.why-tech h3 {
-  color: #6f6af8;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 40px;
+/* brilho animado dentro do card */
+.whyDark-techBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(59, 228, 255, 0.12), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(111, 106, 248, 0.12), transparent 45%);
+  opacity: 1;
+  animation: glowMove 6s ease-in-out infinite;
 }
 
-/* ICONES */
-.tech-icons {
+@keyframes glowMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+.whyDark-techTitle {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.whyDark-techIcons {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
-.tech-circle {
-  width: 110px;
-  height: 110px;
+/* ===== círculos ===== */
+.whyDark-techCircle {
+  width: 115px;
+  height: 115px;
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
+
+  font-weight: 900;
+  font-size: 13px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.25s, box-shadow 0.25s, filter 0.25s;
+  position: relative;
 }
 
-/* CORES DOS CÍRCULOS */
-.tech-circle.n8n {
-  background-color: #5b0b17;
+/* efeito de borda glow */
+.whyDark-techCircle::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(59, 228, 255, 0.32), transparent 60%);
+  opacity: 0;
+  transition: 0.25s;
 }
 
-.tech-circle.gpt {
-  background-color: #e5f0f3;
-  color: #000;
+.whyDark-techCircle:hover::after {
+  opacity: 1;
 }
 
-.tech-circle.hostinger {
-  background-color: #6f42c1;
+.whyDark-techCircle:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.5);
+}
+
+/* cores */
+.whyDark-techCircle.n8n { background: #5b0b17; color: white; }
+.whyDark-techCircle.gpt { background: #e5f0f3; color: #000; }
+.whyDark-techCircle.hostinger { background: #6f42c1; color: white; }
+
+@media (max-width: 900px) {
+  .whyDark-title { font-size: 22px; }
+  .whyDark-techBox { padding: 35px 20px; }
 }

@@ -1,8 +1,8 @@
-/* BOTÃO WHATSAPP FLUTUANTE */
+/* ✅ WHATSAPP FLUTUANTE */
 .whatsapp-float {
   position: fixed;
   right: 25px;
-  bottom: 130px; /* deixa ele acima do footer */
+  bottom: 130px; /* acima do footer */
   width: 55px;
   height: 55px;
   background-color: #25d366;
@@ -27,11 +27,12 @@
   font-size: 30px;
 }
 
-/* FOOTER */
+/* ✅ FOOTER */
 .footer {
   width: 100%;
-  background-color: #6f6af8;
-  padding: 30px 40px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 45px 40px 20px;
   box-sizing: border-box;
 }
 
@@ -40,64 +41,93 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-  align-items: flex-end;
+  gap: 50px;
+  align-items: flex-start;
 }
 
-/* LOGO + NOME */
+/* ESQUERDA */
 .footer-brand {
   display: flex;
+  gap: 14px;
   align-items: center;
-  gap: 12px;
-  color: white;
-  font-weight: 600;
+  min-width: 320px;
 }
 
 .footer-logo {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
 }
 
+.footer-brandText h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.footer-brandText p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
 /* COLUNAS */
 .footer-columns {
-  display: flex;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
 }
 
 .footer-col h4 {
-  color: white;
-  font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .footer-col a {
   display: block;
+  text-decoration: none;
   color: white;
   font-size: 12px;
-  text-decoration: none;
-  margin-bottom: 6px;
   opacity: 0.9;
+  margin-bottom: 8px;
+  transition: 0.2s;
 }
 
 .footer-col a:hover {
   opacity: 0.7;
+  transform: translateX(2px);
+}
+
+/* LINHA + DIREITOS */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 25px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.85;
 }
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
   .footer-container {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-columns {
-    flex-direction: column;
     gap: 30px;
   }
 
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-brand {
+    min-width: auto;
+  }
+
   .whatsapp-float {
-    bottom: 25px; /* no mobile fica mais baixo */
+    bottom: 25px;
   }
 }

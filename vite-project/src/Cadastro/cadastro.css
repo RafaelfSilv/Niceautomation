@@ -1,131 +1,187 @@
-/* PÁGINA */
+/* ===== PAGE DARK THEME ===== */
 .cadastro-page {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-  background: radial-gradient(circle at top, #ecebff 0%, #f6f6f6 50%, #ffffff 100%);
+  align-items: center;
+
+  padding: 70px 20px;
   box-sizing: border-box;
+
+  background: radial-gradient(circle at top, #0f1a33 0%, #0b1324 50%, #08101f 100%);
+  color: white;
+
+  position: relative;
+  overflow: hidden;
 }
 
-/* WRAPPER */
+/* ORBS / GLOW DO FUNDO */
+.cadastro-page::before,
+.cadastro-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.cadastro-page::before {
+  width: 380px;
+  height: 380px;
+  background: #6f6af8;
+  top: -140px;
+  left: -120px;
+}
+
+.cadastro-page::after {
+  width: 320px;
+  height: 320px;
+  background: #3be4ff;
+  bottom: -140px;
+  right: -120px;
+}
+
+/* CENTRALIZA TODO CONTEÚDO */
 .cadastro-wrapper {
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 /* BOTÃO VOLTAR */
 .btn-back {
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 14px;
-  font-weight: 600;
-  color: #6f6af8;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: 0.2s;
 }
 
 .btn-back:hover {
-  opacity: 0.7;
+  color: #3be4ff;
   transform: translateX(-2px);
 }
 
-/* BOX PRINCIPAL */
+/* CARD GLASS */
 .cadastro-box {
-  background: rgba(255, 255, 255, 0.92);
+  width: 100%;
   border-radius: 22px;
-  padding: 35px;
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(111, 106, 248, 0.2);
-  backdrop-filter: blur(10px);
+  padding: 38px 34px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 35px 95px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
 }
 
 /* HEADER */
-.cadastro-header {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
 .cadastro-header h1 {
-  font-size: 30px;
-  margin-bottom: 8px;
-  color: #6f6af8;
-  font-weight: 800;
+  margin: 0 0 8px;
+  font-size: 34px;
+  font-weight: 900;
+  color: #a5b4fc;
 }
 
 .cadastro-header p {
-  font-size: 14px;
-  color: #111827;
-  opacity: 0.85;
+  margin: 0 0 28px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 /* FORM */
 .cadastro-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
-/* INPUTS */
+/* INPUT GROUP */
 .input-group {
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .input-group label {
   font-size: 13px;
-  font-weight: 700;
-  color: #111827;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.88);
 }
 
+/* INPUTS */
 .input-group input {
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
-  outline: none;
+  padding: 13px 14px;
+  border-radius: 14px;
   font-size: 14px;
-  transition: border 0.2s, box-shadow 0.2s;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(8, 16, 31, 0.55);
+  color: white;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .input-group input:focus {
-  border: 1px solid #6f6af8;
-  box-shadow: 0 0 0 5px rgba(111, 106, 248, 0.15);
+  border: 1px solid rgba(59, 228, 255, 0.55);
+  box-shadow: 0 0 0 5px rgba(59, 228, 255, 0.12);
 }
 
 /* BOTÃO */
 .btn-submit {
-  margin-top: 10px;
   width: 100%;
-  background: linear-gradient(135deg, #3be4ff, #6f6af8);
-  color: #0f172a;
-  border: none;
   padding: 14px;
   border-radius: 14px;
-  font-weight: 800;
-  cursor: pointer;
+  border: none;
+
+  background: linear-gradient(135deg, #3be4ff, #6f6af8);
+  color: #08101f;
+
   font-size: 15px;
-  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: 0.2s;
+  margin-top: 4px;
 }
 
 .btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 45px rgba(59, 228, 255, 0.25);
+  box-shadow: 0 20px 55px rgba(59, 228, 255, 0.18);
+  opacity: 0.95;
 }
 
-/* TEXTO DE RODAPÉ */
+/* FOOTER */
 .cadastro-footer {
-  text-align: center;
+  margin-top: 6px;
   font-size: 13px;
-  color: #111827;
-  opacity: 0.85;
-  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.70);
 }
 
 .cadastro-footer span {
-  color: #6f6af8;
-  font-weight: 800;
+  color: #3be4ff;
+  font-weight: 900;
   cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 500px) {
+  .cadastro-box {
+    padding: 30px 22px;
+  }
+
+  .cadastro-header h1 {
+    font-size: 28px;
+  }
 }

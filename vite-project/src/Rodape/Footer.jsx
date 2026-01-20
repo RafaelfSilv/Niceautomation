@@ -2,13 +2,13 @@ import "./Footer.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
-  const phone = "5541999999999"; // <-- COLOQUE AQUI O NÚMERO DO VENDEDOR (DDD + número)
+  const phone = "5541999999999"; // <-- coloque o número real do vendedor
   const message = "Olá! Vim pelo site e gostaria de tirar uma dúvida / fazer orçamento.";
   const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
     <>
-      {/* BOTÃO WHATSAPP FLUTUANTE */}
+      {/* ✅ BOTÃO WHATSAPP FLUTUANTE (continua no site) */}
       <a
         className="whatsapp-float"
         href={whatsappLink}
@@ -19,21 +19,25 @@ export default function Footer() {
         <FaWhatsapp className="whatsapp-icon" />
       </a>
 
-      {/* FOOTER */}
+      {/* ✅ FOOTER ORGANIZADO */}
       <footer className="footer">
         <div className="footer-container">
 
-          {/* LOGO / NOME */}
+          {/* ESQUERDA: LOGO + NOME */}
           <div className="footer-brand">
             <img
               src="Logo.jpeg"
               alt="Logo Nice Automation"
               className="footer-logo"
             />
-            <span>Nice Automation</span>
+
+            <div className="footer-brandText">
+              <h3>Nice Automation</h3>
+              <p>Automação + Inteligência Artificial</p>
+            </div>
           </div>
 
-          {/* COLUNAS */}
+          {/* DIREITA: COLUNAS */}
           <div className="footer-columns">
             <div className="footer-col">
               <h4>Sobre nós</h4>
@@ -53,7 +57,11 @@ export default function Footer() {
               <a href="#">Implementação por bloco</a>
             </div>
           </div>
+        </div>
 
+        {/* LINHA + DIREITOS */}
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} Nice Automation. Todos os direitos reservados.</p>
         </div>
       </footer>
     </>
