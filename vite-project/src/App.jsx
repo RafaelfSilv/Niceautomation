@@ -5,6 +5,8 @@ import Hero from "./ilustrator/Hero";
 import WhyChoose from "./meiosite/WhyChoose";
 import HowItWorks from "./questions/HowItWorks";
 import Footer from "./Rodape/Footer";
+import Pricing from "./Preços/Pricing";
+import SupportBot from "./Suportbot/supportbot";
 
 import Cadastro from "./Cadastro/cadastro";
 
@@ -15,7 +17,10 @@ function Home() {
       <Hero />
       <WhyChoose />
       <HowItWorks />
+      <Pricing/>
       <Footer />
+      
+      <SupportBot/>
     </>
   );
 }

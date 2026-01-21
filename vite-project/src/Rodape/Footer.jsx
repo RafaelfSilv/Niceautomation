@@ -1,23 +1,12 @@
 import "./Footer.css";
-import { FaWhatsapp } from "react-icons/fa";
+
 
 export default function Footer() {
-  const phone = "5541999999999"; // <-- coloque o número real do vendedor
-  const message = "Olá! Vim pelo site e gostaria de tirar uma dúvida / fazer orçamento.";
-  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  
 
   return (
     <>
-      {/* ✅ BOTÃO WHATSAPP FLUTUANTE (continua no site) */}
-      <a
-        className="whatsapp-float"
-        href={whatsappLink}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Falar no WhatsApp"
-      >
-        <FaWhatsapp className="whatsapp-icon" />
-      </a>
+      
 
       {/* ✅ FOOTER ORGANIZADO */}
       <footer className="footer">
